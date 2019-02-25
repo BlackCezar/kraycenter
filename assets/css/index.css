@@ -14,6 +14,8 @@
     opacity: 0;
     position: absolute;
     z-index: 4;
+    -webkit-transition: .4s linear;
+    -o-transition: .4s linear;
     transition: .4s linear;
 }
 
@@ -27,17 +29,29 @@
 .main-slider {
     margin-top: 20px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
-
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
 }
 .main-slide {
     width: 100%;
-    filter: saturate(1);
+    -webkit-filter: saturate(1);
+            filter: saturate(1);
     position: absolute;
     opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
     transition: opacity 0.3s linear;
 }
 .main-slide.active {
@@ -51,13 +65,19 @@
     z-index: 5;
     padding: 10px 0;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .slide-point {
     margin: 0 10px;
     width: 15px;
     height: 15px;
+    -webkit-transition: background 0.1s linear;
+    -o-transition: background 0.1s linear;
     transition: background 0.1s linear;
     cursor: pointer;
     background-color: #bfc5cae7;
@@ -112,7 +132,8 @@
     padding: 10px 20px;    
     display: block;
     text-align: center;
-    text-decoration-line: none;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
     color: whitesmoke;
 }
 
@@ -154,6 +175,8 @@
     font-size: 1.2em;
 }
 .widget_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 10px 0;
     width: 100%;
@@ -165,6 +188,8 @@
 }
 .widget_desc {
     font-size: large;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     min-width: 180px;
 }
@@ -195,7 +220,9 @@
 @media screen and (max-width: 960px) {
 
     .block {
-        transform: scale(.7);
+        -webkit-transform: scale(.7);
+            -ms-transform: scale(.7);
+                transform: scale(.7);
         margin-top: -20px;
         margin-left: 0;
     }
@@ -226,9 +253,14 @@
 
 @media screen and (max-width: 800px) {
     .index {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .sidebar {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: calc(100% - 10px);
         overflow-x: scroll;
@@ -239,7 +271,9 @@
         padding-right: unset;
     }
     .block {
-        transform: unset;
+        -webkit-transform: unset;
+            -ms-transform: unset;
+                transform: unset;
         min-width: 200px;
         height: 130px;
         padding: 10px;
@@ -250,9 +284,15 @@
         height: 130px;
         margin-top: 0;
         margin: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .sidebar_rigth {
         overflow: hidden;
@@ -267,6 +307,8 @@
         width: calc(100% - 220px);
     }
     .widget_body {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         overflow-x: scroll;
     }
@@ -276,11 +318,17 @@
     .sidebar {
         margin-bottom: 10px;
     }
+    .main-slider {
+        height: 65vw;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .sidebar_rigth {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         height: auto;
     }
     .widget {

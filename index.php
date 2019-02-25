@@ -1,5 +1,4 @@
 <?php include('includes/header.php'); 
-    // require_once('php/db.php');
 ?>
 <link rel="stylesheet" href="assets/css/index.css">
 

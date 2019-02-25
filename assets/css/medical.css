@@ -6,6 +6,8 @@ h1 {
     overflow: hidden;
     border-radius: 3px;
     font-weight: 400;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .sbbock3 .listlawyers_search .search {
@@ -25,6 +27,8 @@ h1 {
     padding: 12px 0;
     border-radius: 0 3px 3px 0;
     background: #204E78;
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
     transition: all 200ms ease;
     float: right;
     text-align: center;
@@ -45,6 +49,8 @@ h1 {
     padding: 5px 0;
     background: #E6EBEC;
     font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     text-align: center;
@@ -53,13 +59,21 @@ h1 {
     width: 40%;
 }
 .med_list > div > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .table div  > div:nth-child(3), .item.main:nth-child(3)  {
     width: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .table div  > div:nth-child(3) .btn {
     font-size: .9em;

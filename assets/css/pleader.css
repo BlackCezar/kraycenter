@@ -12,6 +12,8 @@ main {
     padding-right: 20px;
 }
 .search_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .search_block input {
@@ -37,6 +39,8 @@ main {
     padding: 12px 0;
     border-radius: 0 3px 3px 0;
     background: #204E78;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
     transition: all 500ms ease;
     float: right;
     display: block;
@@ -101,12 +105,21 @@ body > div.container {
 
 @media (max-width: 750px) {
     body > div.container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .sidebar {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         width: 100%;
     }
     main {
@@ -140,6 +153,8 @@ main > div {
     margin: 10px 0;
 }
 .content {
+    width: -webkit-min-content;
+    width: -moz-min-content;
     width: min-content;
     margin: 0 auto;
 }
@@ -155,11 +170,21 @@ main > div {
     color: #171719;
     margin-bottom: 20px;
 }
+.content input::-webkit-input-placeholder {
+    color: gray;
+}
+.content input:-ms-input-placeholder {
+    color: gray;
+}
+.content input::-ms-input-placeholder {
+    color: gray;
+}
 .content input::placeholder {
     color: gray;
 }
 a.btn {
-    text-decoration-line: none;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
 }
 
 

@@ -11,15 +11,28 @@ body {
 header {
     width: calc(100% - 5vw);
     padding: 2.5vw;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(32,78,121,1)), to(rgba(22,55,85,1)));
+    background: -webkit-linear-gradient(top, rgba(32,78,121,1) 0%, rgba(22,55,85,1) 100%);
+    background: -o-linear-gradient(top, rgba(32,78,121,1) 0%, rgba(22,55,85,1) 100%);
     background: linear-gradient(180deg, rgba(32,78,121,1) 0%, rgba(22,55,85,1) 100%);
     color: whitesmoke;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 90%;
 }
 .burger > i {
@@ -32,15 +45,20 @@ nav {
     background-color: #344C64;
     list-style-type: none;
     font-size: 1.1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 nav li {
     padding: 15px;
 }
 nav a {
     color: rgb(190, 185, 185);
-    text-decoration-line: none;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
 }
 nav a:visited {
     color: rgb(190, 185, 185);
@@ -52,6 +70,8 @@ nav li:hover a {
     color: whitesmoke;
 }
 .link_to_submenu ul {
+    -webkit-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
     transition: 0.3s linear;
     opacity: 0;
     z-index: 5;
@@ -67,10 +87,21 @@ nav li:hover a {
 .link_to_submenu:hover ul {
     z-index: 6;
     visibility: visible;
-    animation: show_down 0.25s linear forwards;
+    -webkit-animation: show_down 0.25s linear forwards;
+            animation: show_down 0.25s linear forwards;
 }
 .link_to_submenu:not(:hover) ul {
-    animation: show_down-back 0.25s linear;
+    -webkit-animation: show_down-back 0.25s linear;
+            animation: show_down-back 0.25s linear;
+}
+@-webkit-keyframes show_down {
+ from {
+    opacity: 0;
+    top: 110%;
+ } to {
+    opacity: 1;
+    top: 100%;
+ }
 }
 @keyframes show_down {
  from {
@@ -80,6 +111,15 @@ nav li:hover a {
     opacity: 1;
     top: 100%;
  }
+}
+@-webkit-keyframes show_down-back {
+    from {
+        opacity: 1;
+        top: 100%;
+    } to {
+        opacity: 0;
+        top: 110%;
+     }
 }
 @keyframes show_down-back {
     from {
@@ -93,10 +133,14 @@ nav li:hover a {
 ul.container {
     margin: 0;
     position: relative;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .submenu li {
     border-top: 1px solid #163857;
+    -webkit-transition: background 0.2s linear;
+    -o-transition: background 0.2s linear;
     transition: background 0.2s linear;
 }
 .submenu li:hover {
@@ -117,16 +161,24 @@ ul.container {
 .phone {
     font-size: 1.6em;
     font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 20px;
 }
 .header_block {
     margin-left: 10px;
 }
 .header_block, .logo {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 .btn {
     background-color: #204E78;
@@ -166,12 +218,17 @@ ul.container {
 @media screen and (max-width: 680px) {
     header .container{
         width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     .phone {
         font-size: 1em;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .btn, nav {
         font-size: .7em;
@@ -183,18 +240,35 @@ ul.container {
 @media screen and (max-width: 556px) {
     nav {
         padding: 5px 0;
-        justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         padding-left: 20px;
     }
     nav .container {
-        flex-direction: column;
-        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         display: none;
     }
     .display {
         display: block !important;
         height: 0;
-        animation: slideDown 0.2s linear forwards; 
+        -webkit-animation: slideDown 0.2s linear forwards;
+                animation: slideDown 0.2s linear forwards; 
+    }
+    @-webkit-keyframes slideDown {
+        from {
+            height: 0;
+            opacity: 0;
+        } to {
+            opacity: 1;
+            height: 170px;
+        }
     }
     @keyframes slideDown {
         from {
@@ -231,6 +305,8 @@ ul.container {
         display: block;
         color: whitesmoke;
         opacity: 0;
+        -webkit-transition: .3s linear;
+        -o-transition: .3s linear;
         transition: .3s linear;
     }
     .burger.close ul.container {
@@ -244,7 +320,8 @@ ul.container {
     }
     .link_to_submenu:hover ul {
         visibility: unset;
-        animation: unset;
+        -webkit-animation: unset;
+                animation: unset;
     }
     .submenu li:hover {
         background-color: unset;
@@ -258,22 +335,30 @@ ul.container {
         border: 0;
     }
     .link_to_submenu:not(:hover) ul {
-        animation: unset;
+        -webkit-animation: unset;
+                animation: unset;
     }
     
 }
 @media screen and (max-width: 480px) {
     header .container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .logo {
         width: 100%;
         min-width: 350px;
     }
     .phone {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         text-align: center;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 }
 
@@ -321,6 +406,15 @@ ul.container {
     font-size: 2em;
     font-family: SF_FONT;
     font-weight: 600;
+}
+.feedback input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: whitesmoke;
+}
+.feedback input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: whitesmoke;
+}
+.feedback input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    color: whitesmoke;
 }
 .feedback input::placeholder, textarea::placeholder {
     color: whitesmoke;
@@ -376,7 +470,8 @@ ul.container {
     border-radius: 3px;
     background: #fff;
     padding: 25px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
 .AdvokatFB_Form .window .headline {
     position: relative;
@@ -432,6 +527,15 @@ ul.container {
     background-color: transparent;
     max-height: 70px;
 }
+.AdvokatFB_Form .window .container textarea::-webkit-input-placeholder {
+    color: gray;
+}
+.AdvokatFB_Form .window .container textarea:-ms-input-placeholder {
+    color: gray;
+}
+.AdvokatFB_Form .window .container textarea::-ms-input-placeholder {
+    color: gray;
+}
 .AdvokatFB_Form .window .container textarea::placeholder {
     color: gray;
 }
@@ -439,6 +543,8 @@ ul.container {
     width: 100%;
 }
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 10px;
 }

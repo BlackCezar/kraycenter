@@ -1,5 +1,5 @@
 <?php include('includes/header.php'); 
-    // require_once('php/db.php');
+
 ?>
 
 <link rel="stylesheet" href="assets/css/pleader.css">
@@ -10,7 +10,7 @@
     <div class="sidebar">
         <button class="btn review">Отзыв об адвокате</button>
         <button class="btn complain">Пожаловаться на адвоката</button>
-        <button class="btn black-list">Черный список адвокатов</button>
+        <button class="btn black-list">Лишенные статуса</button>
     </div>
     <main>
         <?php include('includes/pleader-sidebar.php'); ?>

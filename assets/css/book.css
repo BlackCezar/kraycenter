@@ -7,21 +7,35 @@ main {
 }
 .analytic_block {
     /* background-color: rgb(241, 241, 241); */
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 20px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .analytic_el {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10px;
     margin-bottom: 10px;
     text-align: center;
     margin-right: 10px;
-    box-shadow: 0px 0px 1px 0px rgb(214, 211, 211);
+    -webkit-box-shadow: 0px 0px 1px 0px rgb(214, 211, 211);
+            box-shadow: 0px 0px 1px 0px rgb(214, 211, 211);
 }
 .analytic_el:last-child {
     margin-right: 0;
@@ -56,7 +70,8 @@ main {
 }
 .form_block label {
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .mar label {
     margin: 0 10px;
@@ -69,17 +84,33 @@ main {
     background-color: white;
     max-height: 70px;
 }
+.form_block textarea::-webkit-input-placeholder {
+    color: gray;
+}
+.form_block textarea:-ms-input-placeholder {
+    color: gray;
+}
+.form_block textarea::-ms-input-placeholder {
+    color: gray;
+}
 .form_block textarea::placeholder {
     color: gray;
 }
 .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .cont_els {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .cont_el {
@@ -87,18 +118,25 @@ main {
     border-radius: 5px;
     padding: 20px;
     width: 50%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 10px;
 }
 .cont_header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .cont_header input {
     width: unset;
 }
 .cont_header label {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .cont_header span {
     display: block;
@@ -123,8 +161,10 @@ main {
 .range::-webkit-slider-thumb {
     -webkit-appearance: none;
     /* border: 1px solid #204E78; */
-    clip-path: circle();
-    transform: scale(1.1);
+    -webkit-clip-path: circle();
+            clip-path: circle();
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     height: 2.5em;
     width: 2.5em;
     border-radius: 3px;
@@ -170,9 +210,13 @@ main {
     right: 20px;
 }
 .filed {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-left: 20px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     margin-bottom: 4rem;
 }
@@ -184,7 +228,8 @@ main {
 /* Тоже самое для IE */
 .range::-ms-thumb {
     clip-path: circle();
-    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+        transform: scale(1.1);
     height: 2.5em;
     width: 2.5em;
     border-radius: 3px;
@@ -199,6 +244,8 @@ main {
     -o-appearance: none;
     appearance: none;
     position: relative;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -o-transition: all 0.15s ease-out 0s;
     transition: all 0.15s ease-out 0s;
     background: #cbd1d8;
     outline: none;
@@ -219,7 +266,9 @@ main {
   }
  
 .cont_header .flex {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 0;
 }
 .price {
@@ -228,6 +277,8 @@ main {
 }
 .cont_ul li{
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-bottom: 15px;
 }
@@ -245,8 +296,12 @@ main {
 }
 
 .options {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 .options .desc {
     padding-left: 5px;
@@ -254,8 +309,12 @@ main {
 .agree_fld {
     width: 30% !important;
     margin: 0px 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .agree_fld #text {
     margin-left: 10px;
@@ -264,6 +323,8 @@ main {
     width: 30%;
     font-size: 1rem;
     padding: 10px;
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
 }
 .ag {
@@ -278,8 +339,12 @@ main {
     height: 1em !important;
 }
 .dogovor_form_lab {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .subcat {
     padding: 10px;
@@ -295,10 +360,14 @@ main {
 
 @media(max-width: 1102px) {
     .analytic_el {
-        flex-grow: 1;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
     }
     .cont_el {
-        flex-grow: 1;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
     }
     .analytic_el:last-child {
         margin-right: 10px;
@@ -306,10 +375,14 @@ main {
 }
 @media(max-width: 560px) {
     .row {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .cont_header {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     .agree_fld {
         margin: 0;

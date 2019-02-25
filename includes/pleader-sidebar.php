@@ -1,5 +1,5 @@
 <div class="black-list_block" hidden>
-    <h2>Черный список адвокатов</h2>
+    <h2>Лишенные статуса адвокаты</h2>
 
     <p>На данной странице Вы можете разместить отзыв об адвокате в соответствие с правилами, а также проверить адвоката на предмет наличия в отношении него отрицательной информации, ранее размещённой в публичном доступе (с указанием первоисточника).</p>
     <p>Если Вы не нашли недобросовестного адвоката в чёрном списке адвокатов и можете сообщить конкретные факты нарушений адвокатом законодательства (мошеннических действий, оказания услуг ненадлежащего качества и др.), заполните форму отзыва, после чего информация будет опубликована на сайте.</p>
@@ -102,7 +102,7 @@ function showBlackListBlock() {
     document.querySelector('.main').style.display = 'unset';
     document.querySelector('.complain_block').hidden = true;
 
-    getAdvokatsTable2('/assets/php/db.php?get=black&loaded=advokats');
+    getAdvokatsTable2('/assets/php/db.php?get=status&loaded=advokats');
     document.querySelector('.main h2').innerText = 'Черный список адвокатов';
     document.querySelector('#search').dataset.selector = 'black';
     document.querySelector('.disclaymer').hidden = false;
@@ -140,26 +140,22 @@ function getAdvokatsTable2 (url) {
         if (res.length >= 1) {
             for (row of res) {
                 let html = document.createElement('tr');
-                let img = new Image;
-                img.src = '' + row.photo;
                 html.innerHTML = `
-                <td><img src="${img.src}"></td>
                 <td>${row.name}</td>
                 <td>${row.reg_num}</td>
-                <td>${row.review}</td>
-                <td>${row.status}</td>
+                <td>${row.num_udostover}</td>
                 `;
                 html.dataset.id = row.id;
                 document.querySelector('.table').appendChild(html);
             }
-            changeTableHedaers(2);
         } 
+        changeTableHedaers(2);
     }
 }
 
 function changeTableHedaers(type) {
     let headers = [
-        'Фото', 'Ф.И.О. Адвоката', 'Регистрационный номер', 'Отзывы', 'Статус'
+        'Ф.И.О. Адвоката', 'Регистрационный номер', 'Номер удостоверения', "", ""
     ];
     let deafultHeader = [
         'Ф.И.О. Адвоката', 'Регистрационный номер', 'Номер удостоверения', 'Адрес', 'Телефон'

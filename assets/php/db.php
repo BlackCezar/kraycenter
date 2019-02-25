@@ -3,7 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     include_once('connect.php');
 
     if ($_GET['get'] != '' && !isset($_GET['scroll'])) {
-        $result = $pdo->query('SELECT `photo`, `name`, `reg_num`, `review`, `status` FROM `'.$_GET['loaded'].'` WHERE `'.$_GET['get'].'` <> "" ORDER BY `name` ASC ');
+        $result = $pdo->query('SELECT  `name`, `reg_num`, `status`, `num_udostover` FROM `'.$_GET['loaded'].'` WHERE `'.$_GET['get'].'` <> "" ORDER BY `name` ASC ');
     } else {
         $result = $pdo->query('SELECT * FROM '.$_GET['get'].' ORDER BY `name` ASC LIMIT '.$_GET['loaded'].', 20');
     }
