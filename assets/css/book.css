@@ -1,0 +1,325 @@
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+.main_block {
+    font-weight: 300;
+}
+.analytic_block {
+    /* background-color: rgb(241, 241, 241); */
+    box-sizing: border-box;
+    padding: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+.analytic_el {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-right: 10px;
+    box-shadow: 0px 0px 1px 0px rgb(214, 211, 211);
+}
+.analytic_el:last-child {
+    margin-right: 0;
+}
+.analytic_logo {
+    font-size: 3.5em;
+    color: gray; 
+}
+.analytic_block .h2 {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.analytic_desc {
+    font-weight: 300;
+}
+.devline {
+    width: 100%;
+    margin: 15px 0;
+    height: 2px;
+    background-color: #204E78;
+}
+.form_block input, .form_block textarea, .form_block select {
+    font-weight: 400;
+    color: #171719;
+    width: calc(100% - 22px);
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0;
+}
+.form_block label {
+    width: 100%;
+    box-sizing: border-box;
+}
+.mar label {
+    margin: 0 10px;
+}
+.row .btn {
+    margin-top: 10px;
+}
+.form_block textarea {
+    min-height: 30px;
+    background-color: white;
+    max-height: 70px;
+}
+.form_block textarea::placeholder {
+    color: gray;
+}
+.row {
+    display: flex;
+}
+
+.cont_els {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cont_el {
+    border: 1px solid rgba(158, 163, 175, 0.568);
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.cont_header {
+    display: flex;
+}
+.cont_header input {
+    width: unset;
+}
+.cont_header label {
+    display: flex;
+    align-items: center;
+}
+.cont_header span {
+    display: block;
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+.range {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    height: 2rem;
+    appearance: none;
+    padding: 0 !important;
+    border-radius: 1.25em !important;
+}
+
+.mgn-l-10 {
+    margin-left: 10px;
+}
+/* Специальные правила для браузеров на движках WebKit/Blink */
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* border: 1px solid #204E78; */
+    clip-path: circle();
+    transform: scale(1.1);
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 3px;
+    background: #204E78;
+    cursor: pointer;
+}
+ 
+/* Тоже самое для Firefox */
+.range::-moz-range-thumb {
+    clip-path: circle();
+    transform: scale(1.1);
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 3px;
+    background: #204E78;
+    cursor: pointer;
+}
+.subrub {
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    height: 1.2rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 17px;
+}
+.range_filed {
+    width: 80%;
+    position: relative;
+}
+.filed input {
+    padding: 15px;
+    border-right: 0;
+    font-size: 1.2rem;
+    border-bottom-right-radius: 0;
+}
+
+.sub-range {
+    position: absolute;
+    color: rgba(0,0,0,.5);
+}
+.sub-range:last-child {
+    right: 20px;
+}
+.filed {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.subtitle {
+    position: absolute;
+    top: 5rem;
+    color: rgba(0,0,0,.5);
+}
+/* Тоже самое для IE */
+.range::-ms-thumb {
+    clip-path: circle();
+    transform: scale(1.1);
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 3px;
+    background: #204E78;
+    cursor: pointer;
+}
+   
+.input_radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    outline: none;
+    color: whitesmoke !important;
+  }
+  .input_radio:hover {
+    background: #9faab7;
+  }
+  .input_radio:checked {
+    background: #204E78;
+  }
+  .input_radio:checked::before {
+    position: absolute;
+    content: '✔';
+    left: 25%;
+    top: 0;
+    display: inline-block;
+  }
+ 
+.cont_header .flex {
+    align-items: center;
+    margin-top: 0;
+}
+.price {
+    padding-left: 5px;
+    color: rgb(199, 40, 40);
+}
+.cont_ul li{
+    list-style-type: none;
+    display: flex;
+    padding-bottom: 15px;
+}
+.cont_ul .icon {
+    color: #204E78;
+    padding-right: 10px;
+}
+
+.opacity {
+    display: none;
+}
+
+.show {
+    display: unset;
+}
+
+.options {
+    display: flex;
+    flex-grow: 1;
+}
+.options .desc {
+    padding-left: 5px;
+}
+.agree_fld {
+    width: 30% !important;
+    margin: 0px 40px;
+    display: flex;
+    align-items: center;
+}
+.agree_fld #text {
+    margin-left: 10px;
+}
+.form_block > div:nth-child(17) > button {
+    width: 30%;
+    font-size: 1rem;
+    padding: 10px;
+    height: min-content;
+}
+.ag {
+    width: unset !important;
+}
+#agree {
+    margin-right: 10px;
+}
+.dogovor_form {
+    width: 1em !important;
+    margin-left: 20px !important;
+    height: 1em !important;
+}
+.dogovor_form_lab {
+    display: flex;
+    align-items: center;
+}
+.subcat {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-left: 0;
+    background-color: white;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    outline: none;
+}
+
+
+@media(max-width: 1102px) {
+    .analytic_el {
+        flex-grow: 1;
+    }
+    .cont_el {
+        flex-grow: 1;
+    }
+    .analytic_el:last-child {
+        margin-right: 10px;
+    }
+}
+@media(max-width: 560px) {
+    .row {
+        flex-direction: column;
+    }
+    .cont_header {
+        flex-wrap: wrap;
+    }
+    .agree_fld {
+        margin: 0;
+        width: unset !important;
+    }
+    .btn {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    .subcat {
+        width: calc(100% - 22px);
+    }
+}

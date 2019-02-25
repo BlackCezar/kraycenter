@@ -1,0 +1,84 @@
+h1 {
+    font-weight: 600;
+    color: #171719;
+}
+.sbbock3 .listlawyers_search {
+    overflow: hidden;
+    border-radius: 3px;
+    font-weight: 400;
+    display: flex;
+}
+.sbbock3 .listlawyers_search .search {
+    font-size: 1em;
+    color: #171719;
+    display: block;
+    width: calc(100% - 130px);
+    outline: none;
+    border: 1px solid #babbbc;
+    padding: 10px 15px;
+    border-radius: 3px 0 0 3px;
+}
+.sbbock3 .listlawyers_search .btn {
+    color: whitesmoke;
+    text-decoration: none;
+    outline: none;
+    padding: 12px 0;
+    border-radius: 0 3px 3px 0;
+    background: #204E78;
+    transition: all 200ms ease;
+    float: right;
+    text-align: center;
+    width: 130px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+.sbbock3 .med_list {
+    margin: 50px 0;
+}
+.sbbock3 .med_list .item {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #E6EBEC;
+}
+.sbbock3 .med_list .main {
+    padding: 5px 0;
+    background: #E6EBEC;
+    font-weight: 600;
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.table div > div:first-child,.table div  > div:nth-child(2), .item.main > div:first-child,.item.main > div:nth-child(2){
+    width: 40%;
+}
+.med_list > div > div {
+    display: flex;
+    align-items: center;
+}
+.table div  > div:nth-child(3), .item.main:nth-child(3)  {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.table div  > div:nth-child(3) .btn {
+    font-size: .9em;
+    width: 90%;
+}
+.table div > div:first-child  a{
+    color: #204E78;
+    font-weight: 500;
+    padding: 0 5px;
+}
+.table div > div:nth-child(2) {
+    color: gray;
+}
+
+@media(max-width: 680px) {
+    .table div  > div:nth-child(3) .btn {
+        font-size: 0.7em;
+    }
+    .med_list {
+        font-size: .8em;
+    }
+}

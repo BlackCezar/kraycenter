@@ -1,0 +1,226 @@
+* {
+    /* font-family: SF_FONT !important; */
+}
+.slider {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    position: absolute;
+    z-index: 4;
+    transition: .4s linear;
+}
+.active {
+    opacity: 1;
+}
+.text {
+    font-weight: 300;
+    font-weight: 1.1rem;
+    line-height: 1.4rem;
+}
+.text p::first-letter {
+    padding-left: 45px;
+}
+
+.sidebar {
+    width: 25%;
+    margin-bottom: 40px;
+}
+.block {
+    width: 200px;
+    height: 130px;
+    margin-top: 20px;
+}
+.sidebar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.block.btn {
+    padding: 0;
+    height: unset;
+}
+.block.btn a {
+    padding: 10px 20px;    
+    display: block;
+    text-align: center;
+    text-decoration-line: none;
+    color: whitesmoke;
+}
+
+
+.container main {
+    width: calc(100% - 40px);
+    padding: 20px;
+}
+.sidebar_left {
+    padding-right: 20px;
+}
+.sidebar_rigth {
+    width: 50%;
+}
+.widget {
+    padding: 20px;
+}
+.widget_header {
+    color: #575759;
+}
+.index {
+    width: 100%;
+}
+
+#search {
+    font-family: SF_FONT;
+    font-weight: 400;
+    font-size: 90%;
+    color: #171719;
+    display: block;
+    width: calc(100% - 22px);
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    padding: 5px 10px;
+    outline: none;
+}
+.widget_title {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.widget_block {
+    display: flex;
+    padding: 10px 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.widget_phone {
+    font-weight: 700;
+    padding-top: 10px;
+}
+.widget_desc {
+    font-size: large;
+    height: fit-content;
+    min-width: 180px;
+}
+.widget_img {
+    margin: 10px;
+    min-width: 60px;
+    background-image: url(../img/services/4.png);
+    background-size: 100% 100%;
+    background-position: center;
+}
+.widget_block:nth-child(2) > .widget_img {
+    background-image: url(../img/services/x1.png);
+}
+.widget_block:nth-child(3) > .widget_img {
+    background-image: url(../img/services/2.png);
+}
+.widget_block:nth-child(4) > .widget_img {
+    background-image: url(../img/services/1.png);
+}
+.widget_block:nth-child(5) > .widget_img {
+    background-image: url(../img/services/8.png);
+}
+
+
+/* !!! */
+
+@media screen and (max-width: 960px) {
+
+    .block {
+        transform: scale(.7);
+        margin-top: -20px;
+        margin-left: 0;
+    }
+    .block:first-child {
+        margin-top: 0;
+    }
+    .block.btn {
+        margin-top: -10px;
+    }
+    .widget_img {
+        min-width: 50px;
+        min-height: 50px;
+    }
+    .widget_desc, .widget_phone {
+        font-size: .9em;
+    } 
+    .widget_block {
+        margin-bottom: 0px;
+    }
+    h1 {
+        font-size: x-large;
+    }
+
+    .slider {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .index {
+        flex-direction: column;
+    }
+    .sidebar {
+        display: flex;
+        width: calc(100% - 10px);
+        overflow-x: scroll;
+        padding-right: 10px;
+        height: 150px;
+    }
+    .sidebar_left {
+        padding-right: unset;
+    }
+    .block {
+        transform: unset;
+        min-width: 200px;
+        height: 130px;
+        padding: 10px;
+        margin-top: 0;
+    }
+    .block.btn {
+        min-width: 200px;
+        height: 130px;
+        margin-top: 0;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sidebar_rigth {
+        overflow: hidden;
+    }
+    .widget:first-child {
+        padding: 0 20px;
+        width: 220px;
+        padding-right: 0;
+    }
+    .widget:nth-child(2) {
+        height: 100%;
+        width: calc(100% - 220px);
+    }
+    .widget_body {
+        display: flex;
+        overflow-x: scroll;
+    }
+    .widget_block {
+        margin-right: 10px;
+    }
+    .sidebar {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar_rigth {
+        flex-direction: column;
+        height: auto;
+    }
+    .widget {
+        width: 100% !important;
+    }
+}

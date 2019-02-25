@@ -1,0 +1,471 @@
+* {
+    font-family: SF_FONT;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F8F8F8;
+    overflow-x: hidden;
+}
+
+header {
+    width: calc(100% - 5vw);
+    padding: 2.5vw;
+    background: linear-gradient(180deg, rgba(32,78,121,1) 0%, rgba(22,55,85,1) 100%);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.burger > i {
+    display: none;
+}
+
+
+nav {
+    text-transform: uppercase;
+    background-color: #344C64;
+    list-style-type: none;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+}
+nav li {
+    padding: 15px;
+}
+nav a {
+    color: rgb(190, 185, 185);
+    text-decoration-line: none;
+}
+nav a:visited {
+    color: rgb(190, 185, 185);
+}
+nav ul {
+    list-style-type: none;
+}
+nav li:hover a {
+    color: whitesmoke;
+}
+.link_to_submenu ul {
+    transition: 0.3s linear;
+    opacity: 0;
+    z-index: 5;
+    top: 100%;
+    position: absolute;
+    padding: 0;
+    visibility: hidden;
+    font-size: small;
+    color: #fff;
+    background-color: #204E78;
+}
+
+.link_to_submenu:hover ul {
+    z-index: 6;
+    visibility: visible;
+    animation: show_down 0.25s linear forwards;
+}
+.link_to_submenu:not(:hover) ul {
+    animation: show_down-back 0.25s linear;
+}
+@keyframes show_down {
+ from {
+    opacity: 0;
+    top: 110%;
+ } to {
+    opacity: 1;
+    top: 100%;
+ }
+}
+@keyframes show_down-back {
+    from {
+        opacity: 1;
+        top: 100%;
+    } to {
+        opacity: 0;
+        top: 110%;
+     }
+}
+ul.container {
+    margin: 0;
+    position: relative;
+    align-items: center;
+}
+.submenu li {
+    border-top: 1px solid #163857;
+    transition: background 0.2s linear;
+}
+.submenu li:hover {
+    background-color: #163857;
+}
+
+.logo {
+    width: 60%;
+    min-width: 350px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.icon {
+    height: 1em;
+}
+.phone {
+    font-size: 1.6em;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header_block {
+    margin-left: 10px;
+}
+.header_block, .logo {
+    flex-grow: 1;
+}
+.btn {
+    background-color: #204E78;
+    color: whitesmoke;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+.block {
+    margin-left: 50px;
+
+}
+.btn:hover {
+    background-color: #306494;
+}
+
+@media screen and (max-width: 960px) { 
+
+    .phone {
+        font-size: 1.3em;
+    }
+    .btn {
+        font-size: 1em;
+    }
+    nav {
+        font-size: .9em;
+    }
+    nav li {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    header .container{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .phone {
+        font-size: 1em;
+        justify-content: center;
+    }
+    .btn, nav {
+        font-size: .7em;
+    }
+    h3 {
+        font-size: .8em;
+    }
+}
+@media screen and (max-width: 556px) {
+    nav {
+        padding: 5px 0;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+    }
+    .display {
+        display: block !important;
+        height: 0;
+        animation: slideDown 0.2s linear forwards; 
+    }
+    @keyframes slideDown {
+        from {
+            height: 0;
+            opacity: 0;
+        } to {
+            opacity: 1;
+            height: 170px;
+        }
+    }
+    nav li {
+        width: 100%;
+    }
+    .burger {
+        display: block;
+        font-size: 1.4em;
+    }
+    .burger i:first-child {
+        opacity: 1;
+    }
+    .burger i:nth-child(2) {
+        opacity: 0;
+        display: none;
+    }
+    .burger.close i:first-child {
+        opacity: 0;
+        display: none;
+    }
+    .burger.close i:nth-child(2) {
+        opacity: 1;
+        display: block;
+    }
+    .burger i {
+        display: block;
+        color: whitesmoke;
+        opacity: 0;
+        transition: .3s linear;
+    }
+    .burger.close ul.container {
+        display: block;
+    }
+    .submenu {
+        visibility: hidden;
+        position: static;
+        background: transparent !important;
+        font-size: inherit !important;
+    }
+    .link_to_submenu:hover ul {
+        visibility: unset;
+        animation: unset;
+    }
+    .submenu li:hover {
+        background-color: unset;
+    }
+    .show {
+        visibility: visible !important;
+        position: static !important;
+        opacity: 1 !important;
+    }
+    .submenu li {
+        border: 0;
+    }
+    .link_to_submenu:not(:hover) ul {
+        animation: unset;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+    }
+    .logo {
+        width: 100%;
+        min-width: 350px;
+    }
+    .phone {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+
+
+
+.feedback .left h2 {
+    font-size: 1.5em;
+}
+.feedback .left input, textarea {
+    font-size: .7em;
+}
+.feedback .left .warning {
+    font-size: .7em;
+}
+.feedback .left .warning {
+    font-family: SF_FONT;
+    font-size: .9em;
+    color: #204E7899;
+    display: block;
+    padding: 0 4px;
+    margin-bottom: 25px;
+}
+
+
+.FeedBackForm {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.feedback .left {
+    width: 30%;
+    min-width: 300px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.clear {
+    clear: both;
+}
+.feedback .left h2 {
+    color: #204E78;
+    font-size: 2em;
+    font-family: SF_FONT;
+    font-weight: 600;
+}
+.feedback input::placeholder, textarea::placeholder {
+    color: whitesmoke;
+}
+.feedback .left input, textarea {
+    outline: none;
+    background: #204e78b0;
+    border: 2px solid #204E78;
+    padding: 10px 20px;
+    border-radius: 3px;
+    width: calc(100% - 44px);
+    font-family: SF_FONT;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.feedback {
+    background: #999;
+    background: url(../img/banner.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    width: 100%;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+/* FORM */
+.AdvokatFB_Form {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+}
+.AdvokatFB_Form_Shadow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 998;
+    display: none;
+}
+.AdvokatFB_Form .window {
+    position: relative;
+    margin: 15vh auto;
+    width: 500px;
+    border-radius: 3px;
+    background: #fff;
+    padding: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+.AdvokatFB_Form .window .headline {
+    position: relative;
+    margin-bottom: 15px;
+}
+.AdvokatFB_Form .window .headline span {
+    font-family: SF_FONT;
+    font-weight: 500;
+    font-size: 120%;
+    color: #171719;
+}
+.AdvokatFB_Form .window .headline .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background: url(../img/close_black.svg)no-repeat 50% 50%;
+    background-size: 100%;
+}
+.AdvokatFB_Form .window .container .label {
+    font-weight: 400;
+    font-size: 90%;
+    color: #999;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.AdvokatFB_Form .window .container .setervalue {
+    font-weight: 500;
+    color: #171719;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.AdvokatFB_Form .container {
+    display: unset;
+}
+.AdvokatFB_Form .window .container input, .AdvokatFB_Form textarea {
+    font-weight: 400;
+    color: #171719;
+    width: calc(100% - 22px);
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0;
+}
+.AdvokatFB_Form .window .container textarea {
+    min-height: 30px;
+    background-color: transparent;
+    max-height: 70px;
+}
+.AdvokatFB_Form .window .container textarea::placeholder {
+    color: gray;
+}
+.AdvokatFB_Form .btn {
+    width: 100%;
+}
+.flex {
+    display: flex;
+    margin-top: 10px;
+}
+
+.flex button:first-child {
+    margin-right: 5px;
+}
+
+
+@media (max-width: 1020px) {
+    .logo img{
+        height: 70%;
+        position: relative;
+        top: 15%;
+    }
+}
+@media (max-width: 600px) {
+    .logo img{
+        height: 60%;
+        position: relative;
+        top: 15%;
+    }
+}
+@media (max-width: 556px) {
+    .logo img{
+        height: 100%;
+        position: unset;
+        top: 0;
+    }
+}

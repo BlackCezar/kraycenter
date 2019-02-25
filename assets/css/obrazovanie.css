@@ -1,0 +1,87 @@
+h1 {
+    font-weight: 600;
+    color: #171719;
+}
+.search_block {
+    overflow: hidden;
+    border-radius: 3px;
+    font-weight: 400;
+    display: flex;
+}
+.search_block .search {
+    font-size: 1em;
+    color: #171719;
+    display: block;
+    width: calc(100% - 130px);
+    outline: none;
+    border: 1px solid #babbbc;
+    padding: 10px 15px;
+    border-radius: 3px 0 0 3px;
+}
+.search_block .btn {
+    color: whitesmoke;
+    text-decoration: none;
+    outline: none;
+    padding: 12px 0;
+    border-radius: 0 3px 3px 0;
+    background: #204E78;
+    transition: all 200ms ease;
+    float: right;
+    text-align: center;
+    width: 130px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+.table_block {
+    margin: 50px 0;
+}
+.table_block .item {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #E6EBEC;
+}
+.table_block .main {
+    padding: 5px 0;
+    background: #E6EBEC;
+    font-weight: 600;
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+.item > div {
+    width: 25%;
+}
+.item  {
+    display: flex;
+    align-items: center;
+}
+.table div  > div:nth-child(3), .item.main:nth-child(3)  {
+    display: flex;
+    justify-content: center;
+}
+.table div  > div .btn {
+    font-size: .9em;
+    width: 90%;
+}
+.table div > div:first-child  a{
+    color: #204E78;
+    font-weight: 500;
+    padding: 0 5px;
+}
+.table div > div:nth-child(2) {
+    color: gray;
+}
+.table div > div a.btn {
+    text-align: center;
+    text-decoration-line: none;
+    width: calc(90% - 20px);
+}
+@media(max-width: 680px) {
+    .table div  > div:nth-child(3) .btn {
+        font-size: 0.7em;
+    }
+    .table_block {
+        font-size: .8em;
+    }
+}

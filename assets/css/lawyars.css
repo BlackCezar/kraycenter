@@ -1,0 +1,104 @@
+.sbblock3 {
+    margin: 70px 0;
+}
+.wrapper {
+    width: 90%;
+}
+.center {
+    display: flex;
+}
+.lawyers_sidebar {
+    min-width: 200px;
+    max-width: 300px;
+}
+.lawyers_sidebar ul {
+    list-style: none;
+    position: sticky;
+    top: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.lawyers_sidebar .active {
+    background: #163856;
+    color: whitesmoke !important;
+}
+.lawyers_sidebar li:hover {
+    background: #163856;
+    padding: 7px 20px;
+    color: whitesmoke;
+}
+
+.lawyers_sidebar li {
+    color: #171719;
+    background: #E6EBEC;
+    padding: 7px 15px;
+    transition: padding .1s linear;
+}
+.lawyers_sidebar a {
+    font-weight: 400;
+    font-size: 1em;
+    color: inherit !important;
+    text-decoration: none;
+    outline: none;
+    display: block;
+    width: fit-content;
+}
+
+
+.lawyers_list {
+    margin: 0 30px;
+    width: calc(100% - 60px);
+}
+.lawyers_list .item {
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.item span {
+    display: block;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #171719;
+}
+.item .btns {
+    margin-left: auto;
+    height: fit-content;
+}
+.btns a {
+    color: whitesmoke;
+    text-decoration: none;
+    outline: none;
+    display: block;
+    margin: 5px;
+    padding: 7px 15px;
+    border-radius: 3px;
+    background: #6e859b;
+    transition: all 200ms linear;
+}
+.btns a:hover {
+    background: #163856;
+}
+
+
+@media (max-width: 680px) {
+    .sbblock3 {
+        margin: 20px 0;
+    }
+    .lawyers_sidebar {
+        margin-left: 0;
+        align-self: center;
+        max-width: 90%;
+        width: 90%;
+    }
+    .center {
+        flex-direction: column;
+    }
+    .lawyers_list {
+        width: calc(100% - 60px);
+    }
+}
