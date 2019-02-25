@@ -5,10 +5,10 @@
 
 <div class="slider">
     
-    <?php 
-        foreach (scandir('./assets/img/banner/') as $file) {
+<?php 
+        foreach (scandir('./assets/img/banner/old') as $file) {
             if (strlen($file) > 3)
-            echo '<div class="slide" style="background-image: url(./assets/img/banner/'.$file.');"></div>';
+            echo '<div class="slide" style="background-image: url(./assets/img/banner/old/'.$file.');"></div>';
         }
     ?>
 
