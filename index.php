@@ -6,9 +6,9 @@
 <div class="slider">
     
     <?php 
-        foreach (scandir('./assets/img/banner/') as $file) {
+        foreach (scandir('./assets/img/banner/old') as $file) {
             if (strlen($file) > 3)
-            echo '<div class="slide" style="background-image: url(./assets/img/banner/'.$file.');"></div>';
+            echo '<div class="slide" style="background-image: url(./assets/img/banner/old/'.$file.');"></div>';
         }
     ?>
 
@@ -27,15 +27,32 @@
 
         <main>
             <h1 class="page_header">Главная</h1>
-            <button class="btn">Консультация онлайн</button>
-
+            <!-- <button class="btn">Консультация онлайн</button> -->
+            <div class="main-slider">
+                <?php 
+                    include_once('assets/php/connect.php');
+                    $counter = 0;
+                    $res = $pdo->query("SELECT * FROM `news`     LIMIT 5")->fetchAll(PDO::FETCH_ASSOC);
+                    foreach($res as $row) {
+                        echo "<div class='main-slide' data-number='$counter' data-id='$row[id]'><img src='$row[img]'>";
+                        echo "<div class='main-slide-dropdown'>";
+                        // echo "<div class='main-slide-dropdown-title'>$row[title]</div>";
+                        // echo "<div class='main-slide-dropdown-date'>$row[date]</div>";
+                        // echo "<div class='main-slide-dropdown-desc'>$row[description]</div>";
+                        // echo "<div class='main-slide-progress'></div>";
+                        // echo "<div class='main-slide-slides' data-target='$row[id]'></div>";
+                        echo "</div></div>";
+                        $counter++;
+                    }
+                ?>
+            </div>
            
         </main>
 
 
         <div class="sidebar sidebar_rigth">
             <div class="widget">
-                <label for="search"><h3>Поиск по сайты</h3></label>
+                <label for="search"><h3>Поиск по сайту</h3></label>
                 <input type="search" name="search" id="search" placeholder="Введите">
             </div>
             <div class="widget">
